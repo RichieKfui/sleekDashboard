@@ -1,0 +1,466 @@
+/**
+*Project by: Richmond Fui
+*Company: rdev studios
+*Date commenced: 31-10-18
+*Description: A sleek dashboard for cms and other projects
+*
+*/
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  background-color: #ccc;
+  font-size: 13.75px;
+}
+
+/*===================
+    GLOBAL STYLES
+*===================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-size: 13.75px;
+}
+
+img {
+  max-width: 100%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+#mainPanel,
+#leftSidebar {
+  transition: .4s all;
+}
+
+/*===================
+    FORM STYLES
+*===================*/
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  border-radius: 3em;
+  font-size: 13px;
+  background-color: #f6f6f6;
+}
+
+input[disabled] {
+  cursor: not-allowed;
+}
+
+.form-group .form-control {
+  transition-duration: .4s;
+}
+
+.form-group .form-control:focus {
+  border-color: #fd7e14;
+}
+
+/*===================
+    SIDEBAR STYLES
+*===================*/
+#leftSidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  margin: 0 auto;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right, #fd7e14 0%, #f17712 60%, #f18e3c 100%);
+}
+
+#leftSidebar .sidebar-wrapper {
+  height: calc(100vh - 75px);
+  overflow-x: hidden;
+  width: 100%;
+  z-index: 1030;
+}
+
+.sidebar-wrapper .sidebar-header {
+  width: auto;
+  height: auto;
+  text-align: center;
+  padding: 15px;
+  z-index: 1031;
+}
+
+.side-menu {
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.side-menu li {
+  position: relative;
+  padding: 0;
+  margin: 4px 0;
+}
+
+.side-menu li .menu-link,
+.dropdown-1 .dropdown-menu-1 li a {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: .3s all;
+  border-radius: 3em;
+}
+
+.side-menu li .menu-link span {
+  padding-left: 10px;
+}
+
+.side-menu li .menu-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.side-menu li .menu-link.active {
+  border-radius: 3em;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 100, 0);
+}
+
+/*===================
+    MAIN PANEL STYLES
+*===================*/
+#mainPanel {
+  position: absolute;
+  height: auto;
+  padding: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: 260px;
+}
+
+.navbar.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none;
+  color: #FFFFFF;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.navbar-transparent .nav-item .nav-link {
+  color: #FFFFFF;
+}
+
+.navbar-toggler {
+  outline: 0;
+  border: 0;
+}
+
+#openSidebar {
+  display: none;
+  color: #fff;
+}
+
+.navbar .navbar-toggler-bar {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 1px;
+  border-radius: 1px;
+  background: #FFFFFF;
+}
+
+.navbar .navbar-toggler-bar.navbar-kebab {
+  height: 4px;
+  width: 4px;
+  margin-bottom: 3px;
+  border-radius: 50%;
+}
+
+.panel-top-sm {
+  width: 100%;
+  height: 170px;
+  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+.panel-top-md {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+.panel-top-lg {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  /* background-image: url(../img/mobile-banking.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-blend-mode: overlay;
+  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+.panel-wrapper.db {
+  margin-top: -9%;
+}
+
+.panel-wrapper {
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: -7%;
+  width: calc(100% - 10px);
+  /* height: 100vh; */
+}
+
+/*===================
+    CARD STYLES
+*===================*/
+.card {
+  border: 0;
+  border-radius: 0.25rem;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1);
+  background-color: #f6f6f6;
+}
+
+.card .card-header, .card .card-footer {
+  background: none;
+  border: 0;
+}
+
+.card .card-header {
+  position: relative;
+  display: flex;
+}
+
+.card .card-header .title {
+  font-weight: 700;
+}
+
+.card .card-header .card-tools {
+  position: absolute;
+  right: 20px;
+}
+
+.card-user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-user .image {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-height: 100px;
+  margin: 0 auto;
+  border-radius: 0.1875rem;
+}
+
+.card-user .image img {
+  width: 100%;
+  max-height: 140px;
+}
+
+.card-user .card-body {
+  width: 100%;
+  padding: 15px;
+  min-height: 240px;
+}
+
+.card-user .card-body .author {
+  text-align: center;
+  color: #ccc;
+  margin-top: -55px;
+  /* text-transform: none; */
+}
+
+.card-user .card-body .author .title {
+  color: #fd7e14;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.card-user .card-body .author a {
+  text-decoration-color: #fd7e14;
+}
+
+.card-user .card-body .author a .avatar {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-bottom: 15px;
+}
+
+.card-user .card-body .author .description {
+  font-size: 14px;
+  padding: 5px 25px;
+}
+
+.card-user .card-footer {
+  text-align: center;
+}
+
+.card-user .card-footer .follow-user a {
+  padding: 5px 25px;
+  font-size: 18px;
+  color: #fd7e14;
+  text-decoration: none;
+}
+
+/*===================
+    INFO-BOX STYLES
+*===================*/
+.info-box {
+  position: relative;
+  max-width: 100%;
+  height: 120px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  padding: .5rem;
+  margin-bottom: 20px;
+  min-height: 80px;
+}
+
+.info-box-icon {
+  margin: 5px;
+  padding: 8px 15px;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -80px;
+  border-radius: 0.1875rem;
+}
+
+.info-box-content {
+  display: flex;
+  width: 100%;
+  margin: 5px;
+  flex-direction: column;
+  word-break: break-all;
+}
+
+.info-box-content .info-box-text {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  word-break: break-all;
+}
+
+.info-box-content .info-box-number {
+  font-weight: 600;
+  font-size: 28px;
+  text-align: right;
+  padding-right: 15px;
+}
+
+/*===================
+    FOOTER STYLES
+*===================*/
+.main-footer {
+  position: relative;
+  padding: 0 15px 20px 15px;
+  margin-bottom: 20px;
+}
+
+.main-footer nav {
+  display: inline-block;
+  float: left;
+}
+
+.main-footer ul {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-footer ul li {
+  display: inline-block;
+}
+
+.main-footer ul li a {
+  color: inherit;
+  padding: 0.5rem;
+  font-size: 0.8571em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-footer ul li a:hover {
+  text-decoration: none;
+}
+
+.main-footer .copyright {
+  float: right;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+/* footer nav */
+/*===================
+    TABLET STYLES
+*===================*/
+/* .left-sidebar.hide {} */
+@media (max-width: 991px) {
+  #openSidebar {
+    display: block !important;
+    color: #fff;
+  }
+
+  #leftSidebar {
+    width: 0;
+    height: 100vh;
+    margin: 0 auto;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to right, #fd7e14 0%, #f17712 60%, #f18e3c 100%);
+  }
+
+  #leftSidebar .sidebar-wrapper {
+    height: calc(100vh - 75px);
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 1030;
+  }
+
+  #leftSidebar.show {
+    width: 260px;
+  }
+
+  #mainPanel {
+    margin-left: 0;
+  }
+
+  #mainPanel.show {
+    margin-left: 260px;
+    overflow-x: hidden !important;
+  }
+}
+
+/*===================
+    MOBILE STYLES
+*===================*/
