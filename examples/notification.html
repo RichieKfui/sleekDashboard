@@ -24,6 +24,17 @@
           <hr style="background: #f6f6f6;">
 
         </div>
+
+        <div class="sidebar-profile">
+          <div class="prof">
+            <img src="" alt="" class="avatar img-responsive">
+            <a href="#">
+              Richmond Fui
+            </a>
+          </div>
+          <hr style="background: #f6f6f6;">
+        </div>
+
         <ul class="side-menu list-unstyled">
           <li>
             <a href="dashboard.html" class="menu-link">
@@ -38,9 +49,9 @@
             </a>
           </li>
           <li>
-            <a href="#" class="menu-link">
+            <a href="tables.html" class="menu-link">
               <i class="fa fa-dashboard"></i>
-              <span>Icons</span>
+              <span>Tables</span>
             </a>
           </li>
           <li>
@@ -58,13 +69,20 @@
     <!-- Main Panel  -->
     <div id="mainPanel" class="main-panel">
       <!-- navbar  -->
-      <nav class="navbar navbar-expand-md navbar-transparent position-absolute fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute fixed-top">
         <div class="container-fluid">
-          <a href="#" id="openSidebar" class="btn btn-lg mr-auto">
+          <!-- <a href="#" id="openSidebar" class="btn btn-lg mr-auto">
             <span class="fa fa-bars"></span>
-          </a>
+          </a> -->
+          <div id="openSidebar">
+            <button type="button" class="navbar-toggler">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </button>
+          </div>
 
-          <a href="#" class="navbar-brand">Notification</a>
+          <a href="#" class="navbar-brand">Dashboard</a>
 
           <button type="button" class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#rdevstudiosNavbar">
             <!-- <span class="navbar-toggler-icon"></span> -->
@@ -74,16 +92,36 @@
           </button>
 
 
-          <div class="collapse navbar-collapse" id="rdevstudiosNavbar">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a href="" class="nav-link">Home</a>
+          <div class="collapse navbar-collapse justify-content-end" id="rdevstudiosNavbar">
+            <form>
+              <div class="input-group no-border">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link">
+                 
+                </a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-bullhorn"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right arrow-up" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Profile</a>
+                <a href="#" class="nav-link">
+                  <i class="fa fa-user-o"></i>
+                  <!-- <p>
+                    <span class="d-lg-none d-md-block">Account</span></p> -->
+                </a>
               </li>
             </ul>
           </div>
@@ -91,9 +129,9 @@
       </nav>
       <!-- end navbar -->
       <div class="panel-top-md">
-
+        <h1>Notification</h1>
       </div>
-      <div class="panel-wrapper db">
+      <div class="panel-wrapper margin-top">
 
         <div class="container-fluid">
           <div class="row">
@@ -101,32 +139,44 @@
               <!-- Card begins -->
               <div class="card">
                 <div class="card-header">
-                  <h5 class="title">Line Chart</h5>
-
-                  <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-widget="collapse">
-                      <i class="fa fa-minus"></i>
-                    </button>
-
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-wrench"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right" role="menu">
-                        <a href="#" class="dropdown-item">Action</a>
-                        <a href="#" class="dropdown-item">Another action</a>
-                        <a href="#" class="dropdown-item">Something else here</a>
-                        <a class="dropdown-divider"></a>
-                        <a href="#" class="dropdown-item">Separated link</a>
-                      </div>
-                    </div>
-
-                    <button type="button" class="btn btn-tool" data-widget="remove">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
+                  <h5 class="title">Notifications Styles</h5>
                 </div>
                 <div class="card-body">
+                  <div class="alert alert-orange alert-1 fade show" role="alert">
+                    <p class="noti-body">This is a simple <strong>Notification!</strong>.</p>
+                  </div>
+
+                  <div class="alert alert-blue alert-2 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with a bell button.</p>
+                  </div>
+
+                  <div class="alert alert-gray alert-3 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with a bell and close button
+                      and have many lines. You can see that the icon and the close button are always
+                      vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</p>
+                    <button type="button" class="noti-btn close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="alert alert-light-red alert-3 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with a bell and close button.</p>
+                    <button type="button" class="noti-btn close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="alert alert-red alert-3 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with a bell and close button.</p>
+                    <button type="button" class="noti-btn close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
                 </div>
               </div>
               <!-- card end  -->
@@ -136,32 +186,44 @@
               <!-- Card begins -->
               <div class="card">
                 <div class="card-header">
-                  <h5 class="title">Scatter Chart</h5>
-
-                  <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-widget="collapse">
-                      <i class="fa fa-minus"></i>
-                    </button>
-
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-wrench"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right" role="menu">
-                        <a href="#" class="dropdown-item">Action</a>
-                        <a href="#" class="dropdown-item">Another action</a>
-                        <a href="#" class="dropdown-item">Something else here</a>
-                        <a class="dropdown-divider"></a>
-                        <a href="#" class="dropdown-item">Separated link</a>
-                      </div>
-                    </div>
-
-                    <button type="button" class="btn btn-tool" data-widget="remove">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
+                  <h5 class="title">Notifications Backgrounds</h5>
                 </div>
                 <div class="card-body">
+                  <div class="alert alert-orange alert-1 fade show" role="alert">
+                    <p class="noti-body">This is a <strong>Notification!</strong>. with an orange background.</p>
+                  </div>
+
+                  <div class="alert alert-blue alert-2 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with a blue background.</p>
+                  </div>
+
+                  <div class="alert alert-gray alert-3 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with a bell and close button
+                      and have many lines. You can see that the icon and the close button are always
+                      vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</p>
+                    <button type="button" class="noti-btn close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="alert alert-light-red alert-3 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with light-red background.</p>
+                    <button type="button" class="noti-btn close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="alert alert-red alert-3 fade show" role="alert">
+                    <p class="noti-icon"><span class="fa fa-bell-o"></span></p>
+                    <p class="noti-body">This is a <strong>Notification!</strong> with light-red background.</p>
+                    <button type="button" class="noti-btn close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
                 </div>
               </div>
               <!-- card end  -->
